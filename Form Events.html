@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Form Events</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Form Events</h1>
+    <form action="" method="post" id="theform">
+        <input type="text" name="name" id="name" placeholder="Name" /><br><br>
+        <input type="number" name="number" id="number" placeholder="Number" /><br><br>
+        <input type="address" name="address" id="address" placeholder="Address" /><br><br>
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+
+    <script>
+        $(document).ready(function(){
+
+            var a = $('form').html();
+            console.log(a);
+
+            $('#name, #number').focus(function(){
+                $(this).css("background-color","lime");
+            });
+
+            $('#address').focus(function(){
+                $(this).css("background-color","grey");
+            });
+
+            $('#name, #number, #address').blur(function(){
+                $(this).css('background-color','');
+            });
+
+            $('#theform').submit(function(){
+                var name = $('#name').val();
+                var number = $('#number').val();
+                var address = $('#address').val();
+               
+                alert(name+" "+number+" "+address);
+            });
+        });
+    </script>
+
+</body>
+</html>

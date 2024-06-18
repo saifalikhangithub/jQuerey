@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jQuery Selectors</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">jQuery Selectors</h1>
+    
+    <div class="1" style="border: 5px solid red; background-color: bisque;">
+        <h1>Heading 1</h1>
+        <p>this is jQuery program created by saif ali khan.</p>
+    </div>
+
+    <ul>
+        <li class="list">saif</li>
+        <li class="list">ali</li>
+        <li class="list">khan</li>
+        <li class="list">businessman</li>
+         <li class="list">saif</li>
+        <li class="list">ali</li>
+        <li class="list">khan</li>
+        <li class="list">businessman</li>
+         <li class="list">saif</li>
+        <li class="list">ali</li>
+        <li class="list">khan</li>
+        <li class="list">businessman</li>
+    </ul>
+
+    <script>
+        $(document).ready(function(){
+            var a = $('.1').html();      
+            console.log(a);
+
+            var b = $('.list').css({"color":"red"});
+            console.log(b);
+
+            var c = $('ul li:eq(3)').css("color","green");      //eg = Equation
+            console.log(c);
+
+            var d = $('ul li:lt(2)').css("color","blue");      //lt = Lower than
+            console.log(d);
+
+            var d = $('ul li:gt(9)').css("color","yellow");      //gt = Greater than
+            console.log(d);
+        });
+    </script>
+
+</body>
+</html>

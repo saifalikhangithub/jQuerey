@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Add Remove Class</title>
+</head>
+<body>
+
+    <style>
+        .cc{background-color: wheat; border: 1px solid red;}
+    </style>
+    <h1 style="text-align: center;">Add Remove Class</h1>
+    
+    <div id="one">
+        <h1>Heading 1</h1>
+        <p>this is jQuery program created by saif ali khan.</p>
+    </div>
+
+    <input type="submit" value="Add Class" id="Add">
+
+    <script>
+
+        $(document).ready(function(){
+            $('#Add').click(function(){
+                $('#one').toggleClass('cc')
+            });
+        });
+
+    </script>
+
+</body>
+</html>

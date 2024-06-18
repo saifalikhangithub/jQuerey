@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Button Events</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Button Events</h1>
+    
+    <div class="1" style="border: 5px solid red; background-color: white;">
+        <h1>Heading 1</h1>
+        <p>this is jQuery program created by saif ali khan.</p>
+    </div>
+
+    <input type="submit" id="style" value="CSS" />
+    <input type="submit" id="r" value="Remove"/>
+    
+    <br><br>
+
+    <input type="submit" value="Width" id="width">
+    <input type="submit" value="Height" id="height">
+    <input type="submit" value="Empty" id="empty">
+    <input type="submit" value="Remove" id="remove">
+    <input type="submit" value="hide and show" id="hide_and_show">
+
+    <script>
+
+        $(document).ready(function(){
+
+            var a = $('.1').html();      
+            console.log(a);
+
+            $('#style').click(function(){
+                $('.1').css({'background-color':'blue', 'border':'5px solid green'});
+            });
+
+            $('#r').click(function(){
+                $('.1').css({'background-color':'white', 'border':'5px solid red'});
+            });
+
+            //---------------
+
+            $('#width').click(function(){
+                $('.1').width('400px');
+            });
+            $('#height').click(function(){
+                $('.1').height('400px');
+            });
+            $('#empty').click(function(){
+                $('.1').empty();
+            });
+            $('#remove').click(function(){
+                $('.1').remove();
+            });
+            $('#hide_and_show').click(function(){
+                $('.1').toggle(1000);
+            });
+        });
+
+    </script>
+
+</body>
+</html>

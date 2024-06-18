@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Mouse Events</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Mouse Events</h1>
+    
+    <div class="1" style="border: 5px solid red; background-color: bisque;">
+        <h1>Heading 1</h1>
+        <p>this is jQuery program created by saif ali khan.</p>
+    </div>
+
+    <input type="button" value="Off Events" id="off">
+
+    <script>
+
+//this is use to put multiple events on any single TAG, CLASS, ID.
+
+        $(document).ready(function(){
+
+            var a = $('.1').html();      
+            console.log(a);
+
+            $(".1").on({
+
+                "click" : function(){       //Click Function
+                    $(this).css("background-color","green");
+                },
+
+                "dblclick" : function(){   //Double Click function
+                    $(this).css("background-color","yellow");
+                },
+
+                "mouseenter" : function(){   //Hover Mouse Function
+                    $(this).css("background-color","blue");
+                }
+            });
+
+
+        // this is use to off the event
+        $('#off').click(function(){
+            $(".1").off("dblclick mouseenter click");   //events name
+              
+        });
+    });
+
+
+    </script>
+
+</body>
+</html>
